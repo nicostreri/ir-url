@@ -124,6 +124,9 @@ Las estadísticas incluyen información de:
 **Nota:** El país de procedencia se obtiene desde el Header "HTTP_CF_IPCOUNTRY" agregado por la Red [Cloudflare](https://www.cloudflare.com).
 Para modificar la forma de obtener el país ver `Helpers@getCodeCountry()` en `app/Libraries/Helpers.php`.
 
+# APIs de Terceros
+* Se utiliza [goqr.me](http://goqr.me/api/) para la generación de códigos QR para mostrar, al acortar una URL.
+
 # Notas
 El proyecto fue realizado y probado utilizando:
 * PHP 7.1
