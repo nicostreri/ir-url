@@ -77,7 +77,19 @@
                     pass:pass
                 })
             }).done(function( data ){
-                swal("Acortado!!","Tu enlace es: " +data["fullUrl"], "success");
+                var htmlTexto = '<img src="//api.qrserver.com/v1/create-qr-code/?data='+encodeURIComponent(data["fullUrl"])+'&size=200x200" alt="" title=""/>';
+                htmlTexto += "</br>Tu enlace es: <a href='"+data["fullUrl"]+"'>"+data["fullUrl"]+"</a>";
+                swal({
+                    title: "Acortado!!",
+                    icon: "success",
+                    content: {
+                        element: "p",
+                        attributes: {
+                            innerHTML: htmlTexto
+                        }
+                    }
+                });
+                $("#url_input").val("");
             }).fail( function( jqXHR, textStatus, errorThrown ) {
                 if( jqXHR.status === 422 ) {
                     //process validation errors.
