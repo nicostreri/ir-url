@@ -16,7 +16,7 @@ php artisan migrate
 ```bash
 php -S localhost:8000 -t public
 ```
-* Listo 🙂 [DEMO](https://ir.nstreri.ga/)
+* Listo 🙂 [DEMO](https://ir.streri.com/)
 
 ## Endpoints API HTTP
 ### Crear URL Acortada
